@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Ali",
+        "age": 16,
+        "class_level": 10,
+        "subjects": {
+            "Math": 91,
+            "Science": 95,
+            "English": 99
+        },
+        "address": "karachi"
+    },
+    {
+        "name": "laal",
+        "age": 16,
+        "class_level": 10,
+        "subjects": {
+            "Math": 81,
+            "Science": 95,
+            "English": 99
+        },
+        "address": "karachi"
+    },
+    {
+        "name": "ali",
+        "age": 16,
+        "class_level": 10,
+        "subjects": {
+            "Math": 90,
+            "Science": 85,
+            "English": 100
+        },
+        "address": "abc"
+    }
+]
