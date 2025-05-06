@@ -91,32 +91,36 @@ if submit:
             for err in e.errors():
                 st.write(f"🔴 {err['msg']}")
 
+
 # --- Search / Filter Students ---
 st.divider()
 st.subheader("🔎 Search / Filter Students")
 
-# Initialize session state values on first run
+# Initialize session state only once
 if "search_name" not in st.session_state:
     st.session_state.search_name = ""
 if "filter_class" not in st.session_state:
     st.session_state.filter_class = 0
 
-# Use session_state to manage filter inputs
+# Callback to reset filters
+def reset_filters():
+    st.session_state.search_name = ""
+    st.session_state.filter_class = 0
+
+# Use session state for inputs
 st.text_input("Search by name", key="search_name")
 st.number_input("Filter by class level (optional)", min_value=0, value=st.session_state.filter_class, step=1, key="filter_class")
 
-# Reset filters
-if st.button("🔄 Reset Filters"):
-    st.session_state.search_name = ""
-    st.session_state.filter_class = 0
-    st.rerun()
+# Reset button calls callback
+st.button("🔄 Reset Filters", on_click=reset_filters)
 
-# Apply filters using current session state values
+# Apply filters
 filtered_students = [
     s for s in students
     if (st.session_state.search_name.lower() in s.name.lower()) and
        (st.session_state.filter_class == 0 or s.class_level == st.session_state.filter_class)
 ]
+
 
 
 st.divider()
