@@ -31,6 +31,7 @@ st.sidebar.markdown("### 🛠 Developer Contact")
 st.sidebar.write("📧 [Email Us](mailto:ismailahmedshahpk@gmail.com)")
 st.sidebar.write("🔗 [Connect on LinkedIn](https://www.linkedin.com/in/ismail-ahmed-shah-2455b01ba/)")
 st.sidebar.write("💬 [Chat on WhatsApp](https://wa.me/923322241405)")
+st.sidebar.write("🔗 [❤️ Ismail Ahmed Shah ❤️](https://www.linkedin.com/in/ismail-ahmed-shah-2455b01ba/)")
 
 st.sidebar.markdown("---")
 st.sidebar.image("https://cdn-icons-png.flaticon.com/512/219/219969.png", width=90, use_container_width=True)
